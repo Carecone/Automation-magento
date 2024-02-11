@@ -10,6 +10,7 @@ class telaLogin {
 
     PreencherSenha(senha) {
         cy.get(this.campoSenha).type(senha);
+        cy.wait(1000)
     }
 
     RealizarLogin() {

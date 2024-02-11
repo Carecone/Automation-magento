@@ -25,6 +25,7 @@ class telaCadastro {
 
     RepetirSenha(senha) {
         cy.get(this.campoConfirmarSenha).type(senha);
+        cy.wait(1000)
     }
 
     CriarConta() {

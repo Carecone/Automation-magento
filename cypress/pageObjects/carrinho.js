@@ -1,4 +1,4 @@
-class telaLogin {
+class telaCarrinho {
     tamanhoRoupa = "div.swatch-opt-1580 > div > div > #option-label-size-157-item-174"
     corRoupa = "div.swatch-opt-1580 > div:nth-child(2) > div > #option-label-color-93-item-60"
     tamanhoRoupaCarinho = "#option-label-size-157-item-174"
@@ -27,14 +27,16 @@ class telaLogin {
     AdicionarItemCarrinho() {
         cy.get(this.produtoPesquisa).realHover('mouse')
         cy.get(this.botaoAdicionarItemCarrinho).click();
+        cy.wait(3000)
     }
 
     AdicionarItemTelaCarrinho() {
         cy.get(this.botaoAdicionarItemTelaCarrinho).click();
+        cy.wait(3000)
     }
 
     ValidarProdutoAdicionadoCarrinho(produto) {
         cy.get(this.mensagemAdicionarProdutoCarrinhoSucesso).should('have.text','\n\nYou added ' +produto+ ' to your shopping cart.\n')
     }
 }
-module.exports = new telaLogin();
+module.exports = new telaCarrinho();

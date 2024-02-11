@@ -1,6 +1,6 @@
 const TelaInicial = require('../pageObjects/telaInicial')
 const Login = require('../pageObjects/login')
-
+const Carrinho = require('../pageObjects/carrinho')
 Cypress.Commands.add('login', () => {
     cy.fixture('usuarios').then((usuario) => {
         TelaInicial.ClicarRealizarLogin();
@@ -8,6 +8,14 @@ Cypress.Commands.add('login', () => {
         Login.PreencherSenha(usuario[1].senha)
         Login.RealizarLogin();
     })
+})
+
+Cypress.Commands.add('adicionarItemCarrinho', () => {
+    TelaInicial.PreencherCampoPesquisa('Gwyn Endurance Tee');
+    TelaInicial.PesquisarProduto();
+    Carrinho.SelecionarCorRoupa();
+    Carrinho.SelecionarTamanhoRoupa();
+    Carrinho.AdicionarItemCarrinho();
 })
 
 //
