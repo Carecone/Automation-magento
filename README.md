@@ -59,7 +59,7 @@ npx cypress open
 ```
 Isso abrirá a interface do usuário do Cypress, onde você pode selecionar e executar testes individualmente.
 
-2. Você tambem pode utilizar esse comando, isso executará todos os testes em modo de linha de comando:
+2. Você tambem pode utilizar o comando abaixo, isso executará todos os testes em modo de linha de comando:
 ```bash
 npx cypress run
 ```
