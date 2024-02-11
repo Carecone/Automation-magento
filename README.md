@@ -12,7 +12,7 @@ Antes de começar, verifique se você possui o seguinte instalado em sua máquin
 
 - Node.js - https://nodejs.org/en/download
 
-## Clonando um Projeto do GitHub
+## Clonando o Projeto
 
 Para clonar o projeto para o seu ambiente local, siga estas etapas:
 
@@ -45,7 +45,7 @@ Para instalar todas a dependências, siga estas etapas:
 ```bash
 npm install --save-dev
 ```
-Isso instalará todas as dependências do projeto.
+Isso instalará todas as dependências do projeto apenas no diretório que estiver navegado.
 
 ## Execução 
 
