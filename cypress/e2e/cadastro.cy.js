@@ -6,15 +6,15 @@ beforeEach(() => {
     cy.visit('');
 })
 
-describe('[Fluxo Feliz] - Cadastro de usuário', () => {
-    it('Cadastro de usuário', () => {
+describe('[Fluxo Feliz] - Tela de Cadastro de usuário', () => {
+    it('Realizar cadastro de um novo usuário corretamente.', () => {
         cy.fixture('usuarios').then((usuario) => {
             TelaInicial.ClicarCriarConta();
-            Cadastro.PreencherPrimeiroNome(usuario.nome);
-            Cadastro.PreencherSegundoNome(usuario.segundoNome);
-            Cadastro.PreencherEmail(dataUtils.gerarEmail() + usuario.email)
-            Cadastro.PreencherSenha(usuario.senha)
-            Cadastro.RepetirSenha(usuario.senha)
+            Cadastro.PreencherPrimeiroNome(usuario[0].nome);
+            Cadastro.PreencherSegundoNome(usuario[0].segundoNome);
+            Cadastro.PreencherEmail(dataUtils.gerarEmail() + usuario[0].email)
+            Cadastro.PreencherSenha(usuario[0].senha)
+            Cadastro.RepetirSenha(usuario[0].senha)
             Cadastro.CriarConta();
         } )
     })

@@ -1,6 +1,12 @@
-{
-  "nome": "Diego",
-  "segundoNome": "Souza",
-  "email": "@gmail.com",
-  "senha": "Zxky123*"
-}
+[
+  {
+    "nome": "Diego",
+    "segundoNome": "Souza",
+    "email": "@gmail.com",
+    "senha": "Zxky123*"
+  },
+  {
+    "email": "roni_cost@example.com",
+    "senha": "roni_cost3@example.com"
+  }
+]
