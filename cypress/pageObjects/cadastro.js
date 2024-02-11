@@ -5,7 +5,7 @@ class telaCadastro {
     campoSenha = "#password"
     campoConfirmarSenha = "#password-confirmation"
     botaoConfirmarCadastro = 'button[title="Create an Account"]'
-    mensagemCriarContaSucesso = '.message-success'
+    mensagemCriarContaSucesso = ".message-success"
 
     PreencherPrimeiroNome(primeiroNome) {
         cy.get(this.campoPrimeiroNome).type(primeiroNome);
@@ -29,7 +29,10 @@ class telaCadastro {
 
     CriarConta() {
         cy.get(this.botaoConfirmarCadastro).click()
-        cy.get(this.mensagemCriarContaSucesso).should('be.visible');
+    }
+
+    ValidarContaCriada(mensagem) {
+        cy.get(this.mensagemCriarContaSucesso).should('have.text',"\n"+mensagem+"\n")
     }
 }
 

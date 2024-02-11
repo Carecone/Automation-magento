@@ -16,6 +16,7 @@ describe('[Fluxo Feliz] - Tela de Cadastro de usuário', () => {
             Cadastro.PreencherSenha(usuario[0].senha)
             Cadastro.RepetirSenha(usuario[0].senha)
             Cadastro.CriarConta();
+            Cadastro.ValidarContaCriada("Thank you for registering with Main Website Store.");
         } )
     })
 })

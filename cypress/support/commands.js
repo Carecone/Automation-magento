@@ -1,17 +1,15 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
+const TelaInicial = require('../pageObjects/telaInicial')
+const Login = require('../pageObjects/login')
+
+Cypress.Commands.add('login', () => {
+    cy.fixture('usuarios').then((usuario) => {
+        TelaInicial.ClicarRealizarLogin();
+        Login.PreencherEmail(usuario[1].email)
+        Login.PreencherSenha(usuario[1].senha)
+        Login.RealizarLogin();
+    })
+})
+
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
