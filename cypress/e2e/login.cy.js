@@ -12,6 +12,7 @@ describe('[Fluxo Feliz] - Tela de login', () => {
             Login.PreencherEmail(usuario[1].email)
             Login.PreencherSenha(usuario[1].senha)
             Login.RealizarLogin();
+            Login.ValidarLogin();
         } )
     })
 })

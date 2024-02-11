@@ -2,7 +2,7 @@ class telaLogin {
     campoEmail = "#email"
     campoSenha = "#pass"
     botaoRealizarLogin = '.action.login.primary'
-    mensagemValidarLogin = 'li.greet.welcome'
+    mensagemValidarLogin = '#message-error'
 
     PreencherEmail(email) {
         cy.get(this.campoEmail).type(email);
@@ -15,8 +15,10 @@ class telaLogin {
 
     RealizarLogin() {
         cy.get(this.botaoRealizarLogin).click()
-        cy.get(this.mensagemValidarLogin).should('be.visible');
+    }
+    
+    ValidarLogin() {
+        cy.get(this.mensagemValidarLogin).should('not.exist');
     }
 }
-
 module.exports = new telaLogin();

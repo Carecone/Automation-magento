@@ -13,7 +13,7 @@ class telaCarrinho {
     }
 
     SelecionarCorRoupa() {
-        cy.get(this.corRoupa).click();
+        cy.get(this.corRoupa, { timeout: 5000 }).click();
     }
 
     SelecionarTamanhoRoupaCarrinho() {
@@ -32,11 +32,10 @@ class telaCarrinho {
 
     AdicionarItemTelaCarrinho() {
         cy.get(this.botaoAdicionarItemTelaCarrinho).click();
-        cy.wait(3000)
     }
 
     ValidarProdutoAdicionadoCarrinho(produto) {
-        cy.get(this.mensagemAdicionarProdutoCarrinhoSucesso).should('have.text','\n\nYou added ' +produto+ ' to your shopping cart.\n')
+        cy.get(this.mensagemAdicionarProdutoCarrinhoSucesso, { timeout: 5000 }).should('have.text','\n\nYou added ' +produto+ ' to your shopping cart.\n')
     }
 }
 module.exports = new telaCarrinho();

@@ -12,5 +12,6 @@ describe('[Fluxo Feliz] - Tela de finalização de compra', () => {
         Checkout.SelecionarTipoEntrega();
         Checkout.Proximo();
         Checkout.FinalizarCompra();
+        Checkout.ValidarPedidoRealizado('Thank you for your purchase!');
     })
 })

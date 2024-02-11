@@ -5,7 +5,6 @@ class telaInicial {
     botaoCampoPesquisa = "button[title='Search']"
     produtoPesquisa = "div.swatch-opt-1580"
     produtoTelaInicial = 'div > a[href="https://magento2-demo.magebit.com/radiant-tee.html"]'
-    tituloPaginaPesquisa= '.page-title'
 
     ClicarCriarConta() {
         cy.contains('a', this.btnCriarConta).click();
@@ -26,7 +25,5 @@ class telaInicial {
     SelecionarProduto() {
         cy.get(this.produtoTelaInicial).click();
     }
-    
 }
-
 module.exports = new telaInicial();

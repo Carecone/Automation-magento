@@ -1,6 +1,8 @@
 const TelaInicial = require('../pageObjects/telaInicial')
 const Login = require('../pageObjects/login')
 const Carrinho = require('../pageObjects/carrinho')
+const Checkout = require('../pageObjects/checkout')
+
 Cypress.Commands.add('login', () => {
     cy.fixture('usuarios').then((usuario) => {
         TelaInicial.ClicarRealizarLogin();
@@ -16,6 +18,13 @@ Cypress.Commands.add('adicionarItemCarrinho', () => {
     Carrinho.SelecionarCorRoupa();
     Carrinho.SelecionarTamanhoRoupa();
     Carrinho.AdicionarItemCarrinho();
+})
+
+Cypress.Commands.add('realizarPedido', () => {
+    Checkout.AbrirCheckout();
+    Checkout.SelecionarTipoEntrega();
+    Checkout.Proximo();
+    Checkout.FinalizarCompra();
 })
 
 //

@@ -36,5 +36,4 @@ class telaCadastro {
         cy.get(this.mensagemCriarContaSucesso).should('have.text',"\n"+mensagem+"\n")
     }
 }
-
 module.exports = new telaCadastro();
