@@ -24,7 +24,7 @@ Para clonar o projeto para o seu ambiente local, siga estas etapas:
 cd caminho/para/sua/pasta/de/projetos
 ```
 
-1. No GitHub, vá até o repositório do projeto que deseja clonar.
+1. No GitHub, vá até o repositório do projeto.
 
 2. No canto superior direito do repositório, clique no botão verde "Code" e copie a URL fornecida.
 
